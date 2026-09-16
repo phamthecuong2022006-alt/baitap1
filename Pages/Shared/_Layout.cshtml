@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - VnE-GO</title>
+
+    <link rel="stylesheet"
+          href="~/css/news.css"
+          asp-append-version="true"/>
+</head>
+
+<body>
+<header class="header">
+    <nav class="container nav" aria-label="Chuyên mục">
+        <a class="home" asp-page="/Index">⌂</a>
+        <a href="#">VnE-GO</a>
+        <a href="#">Thời sự</a>
+        <a href="#">Thế giới</a>
+        <a href="#">Kinh doanh</a>
+        <a href="#">Khoa học công nghệ</a>
+        <a href="#">Góc nhìn</a>
+        <a href="#">Spotlight</a>
+        <a href="#">Bất động sản</a>
+        <a href="#">Sức khỏe</a>
+        <a href="#">Giải trí</a>
+        <a href="#">Thể thao</a>
+        <a asp-page="/CuaToi">Của tôi</a>
+    </nav>
+</header>
+
+<main class="container">
+    @RenderBody()
+</main>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
